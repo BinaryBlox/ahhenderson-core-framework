@@ -1,6 +1,6 @@
 package ahhenderson.core.util
 {
-	import feathers.data.ListCollection;
+	
 
 	//
 	// This class is deprecated, move to DateUtil.
@@ -328,7 +328,7 @@ package ahhenderson.core.util
 			
 		}
 		
-		public static const monthLabelsList:ListCollection = new ListCollection(
+		public static const monthLabelsList:Array = new Array(
 			[ 
 				{ label: "January"},
 				{ label: "February"},
@@ -373,7 +373,7 @@ package ahhenderson.core.util
 		
 		
 		
-		public static const timeZoneLabelsList:ListCollection = new ListCollection(
+		public static const timeZoneLabelsList:Array = new Array(
 			[ 
 				{ label: "PT", value:0},
 				{ label: "MT", value:1},

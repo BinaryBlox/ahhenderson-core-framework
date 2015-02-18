@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
-  <includeClasses/>
+  <includeClasses>
+    <classEntry path="ahhenderson.core.util.LocalStorageUtils"/>
+    <classEntry path="ahhenderson.core.starling.controls.ProgressBar"/>
+    <classEntry path="ahhenderson.core.starling.controls.core.StarlingApplication"/>
+    <classEntry path="ahhenderson.core.starling.textures.GradientTexture"/>
+  </includeClasses>
   <includeResources/>
   <namespaceManifests/>
 </flexLibProperties>

@@ -29,6 +29,8 @@ package ahhenderson.core.starling.controls.core {
 		
 		private var _logger:LoggingManager;
 		
+		include  "../../../includes/_Version.inc";
+		
 		public function StarlingApplication(debug:Boolean=false) {
  
 			scopeClassInstances();
@@ -73,6 +75,7 @@ package ahhenderson.core.starling.controls.core {
 			
 			logger.initialize(this);
 			logger.clear();
+			logger.trace(this, "[ahhenderson-core-framework] VERSION: " + getAppVersion());
 			logger.trace(this, "Starting Starling Application...");
 			 
 			

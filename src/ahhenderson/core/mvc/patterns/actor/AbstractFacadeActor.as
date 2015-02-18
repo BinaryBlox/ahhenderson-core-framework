@@ -22,8 +22,9 @@ package ahhenderson.core.mvc.patterns.actor {
 	use namespace ahhenderson_internal;
 	
 	internal class AbstractFacadeActor implements IFacadeActor {
-
-		include "../../../../../includes/ahhenderson/core/SuspendModeIncludes.inc"
+ 
+		// Supporting global suspension
+		include "../../../includes/_SuspendModeIncludes.inc"
 
 		public static const NAME:String = 'AbstractFacadeActor';
 

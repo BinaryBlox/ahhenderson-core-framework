@@ -13,10 +13,11 @@ package ahhenderson.core.ui.controls
 			super();
 		}
 	  
-		include "../../../../includes/ahhenderson/core/FacadeViewIncludes.inc"
+		
+		include "../../includes/_FacadeViewIncludes.inc"
 		
 		// Supporting global suspension
-		include "../../../../includes/ahhenderson/core/SuspendModeIncludes.inc"
+		include "../../includes/_SuspendModeIncludes.inc"
 		
 	}
 }

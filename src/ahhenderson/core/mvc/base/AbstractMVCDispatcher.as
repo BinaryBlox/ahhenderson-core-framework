@@ -18,9 +18,9 @@ package ahhenderson.core.mvc.base {
 			super();
 		}
 		
-		include "../../includes/_FacadeViewIncludes.inc"
+		include "../../_includes/_FacadeViewIncludes.inc"
 		
 		// Supporting global suspension
-		include "../../includes/_SuspendModeIncludes.inc"
+		include "../../_includes/_SuspendModeIncludes.inc"
 	}
 }

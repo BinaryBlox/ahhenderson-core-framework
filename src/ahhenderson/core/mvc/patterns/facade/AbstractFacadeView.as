@@ -12,10 +12,10 @@ package ahhenderson.core.mvc.patterns.facade {
 	public class AbstractFacadeView implements IFacadeView {
  
 		
-		include "../../../includes/_FacadeViewIncludes.inc"
+		include "../../../_includes/_FacadeViewIncludes.inc"
 		
 		// Supporting global suspension
-		include "../../../includes/_SuspendModeIncludes.inc"
+		include "../../../_includes/_SuspendModeIncludes.inc"
 
 		public function AbstractFacadeView() {
 			super();

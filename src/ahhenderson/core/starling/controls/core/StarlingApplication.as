@@ -29,7 +29,7 @@ package ahhenderson.core.starling.controls.core {
 		
 		private var _logger:LoggingManager;
 		
-		include  "../../../includes/_Version.inc";
+		include  "../../../_includes/_Version.inc";
 		
 		public function StarlingApplication(debug:Boolean=false) {
  

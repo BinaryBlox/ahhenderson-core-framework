@@ -7,13 +7,13 @@
 
 package ahhenderson.core.mvc.patterns.actor {
 
-	import ahhenderson.core.ahhenderson_internal;
+	import ahhenderson.core.ahhenderson_core_internal;
 	import ahhenderson.core.mvc.enums.ActorType;
 	import ahhenderson.core.mvc.interfaces.IModelActor;
 	import ahhenderson.core.mvc.patterns.facade.GlobalFacade;
 	import ahhenderson.core.util.GuidUtil;
 
-	use namespace ahhenderson_internal;
+	use namespace ahhenderson_core_internal;
 
 
 	public class ModelActor extends AbstractFacadeActor implements IModelActor {

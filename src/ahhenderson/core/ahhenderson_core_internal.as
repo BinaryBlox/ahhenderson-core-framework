@@ -13,7 +13,7 @@ package ahhenderson.core
 {
 
 
-public namespace ahhenderson_internal =
+public namespace ahhenderson_core_internal =
 	"http://ahhenderson/internal";
 }
 

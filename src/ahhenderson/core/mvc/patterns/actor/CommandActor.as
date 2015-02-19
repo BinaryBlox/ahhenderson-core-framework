@@ -6,13 +6,13 @@
 //------------------------------------------------------------------------------
 
 package ahhenderson.core.mvc.patterns.actor {
-	import ahhenderson.core.ahhenderson_internal;
+	import ahhenderson.core.ahhenderson_core_internal;
 	import ahhenderson.core.mvc.enums.ActorType;
 	import ahhenderson.core.mvc.interfaces.ICommandActor;
 	import ahhenderson.core.mvc.interfaces.IFacadeMessage;
 	import ahhenderson.core.mvc.patterns.facade.GlobalFacade;
 	
-	use namespace ahhenderson_internal;
+	use namespace ahhenderson_core_internal;
 	
 	public class CommandActor extends AbstractFacadeActor implements ICommandActor {
 

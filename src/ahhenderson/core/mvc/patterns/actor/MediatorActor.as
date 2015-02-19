@@ -11,7 +11,7 @@ package ahhenderson.core.mvc.patterns.actor {
 	
 	import mx.events.FlexEvent;
 	
-	import ahhenderson.core.ahhenderson_internal;
+	import ahhenderson.core.ahhenderson_core_internal;
 	import ahhenderson.core.mvc.enums.ActorType;
 	import ahhenderson.core.mvc.interfaces.IFacadeView;
 	import ahhenderson.core.mvc.interfaces.IMediatorActor;
@@ -19,7 +19,7 @@ package ahhenderson.core.mvc.patterns.actor {
 	
 	import starling.events.Event;
 
-	use namespace ahhenderson_internal;
+	use namespace ahhenderson_core_internal;
 
 
 	public class MediatorActor extends AbstractFacadeActor implements IMediatorActor {

@@ -9,7 +9,7 @@ package ahhenderson.core.mvc.patterns.actor {
 
 	import flash.events.TimerEvent;
 	
-	import ahhenderson.core.ahhenderson_internal;
+	import ahhenderson.core.ahhenderson_core_internal;
 	import ahhenderson.core.mvc.enums.ActorType;
 	import ahhenderson.core.mvc.interfaces.IFacadeActor;
 	import ahhenderson.core.mvc.interfaces.IFacadeMessage;
@@ -19,7 +19,7 @@ package ahhenderson.core.mvc.patterns.actor {
 	import ahhenderson.core.util.CustomTimer;
 	import ahhenderson.core.util.GuidUtil;
 
-	use namespace ahhenderson_internal;
+	use namespace ahhenderson_core_internal;
 	
 	internal class AbstractFacadeActor implements IFacadeActor {
  

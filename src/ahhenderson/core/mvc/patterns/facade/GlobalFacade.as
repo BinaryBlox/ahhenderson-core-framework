@@ -10,7 +10,7 @@ package ahhenderson.core.mvc.patterns.facade {
 	import flash.events.EventDispatcher;
 	import flash.events.TimerEvent;
 	
-	import ahhenderson.core.ahhenderson_internal;
+	import ahhenderson.core.ahhenderson_core_internal;
 	import ahhenderson.core.mvc.enums.ActorType;
 	import ahhenderson.core.mvc.enums.GlobalFacadeActionType;
 	import ahhenderson.core.mvc.events.GlobalFacadeMessageEvent;
@@ -24,7 +24,7 @@ package ahhenderson.core.mvc.patterns.facade {
 	import ahhenderson.core.mvc.patterns.actor.ModelActor;
 	import ahhenderson.core.util.CustomTimer;
 
-	use namespace ahhenderson_internal;
+	use namespace ahhenderson_core_internal;
 	
 	[Event(name = "globalMessageManagerEvent", type = "ahhenderson.core.mvc.events.GlobalFacadeMessageEvent")] 
 	public final class GlobalFacade extends EventDispatcher implements IFacade {
@@ -72,7 +72,7 @@ package ahhenderson.core.mvc.patterns.facade {
 		 * @param actorKey
 		 * @return 
 		 */
-		ahhenderson_internal function removeActor(actorName:String, actorKey:String):Boolean {
+		ahhenderson_core_internal function removeActor(actorName:String, actorKey:String):Boolean {
 			var existingIndex:int = searchRegisteredActors(actorName, actorKey);
 			var bSuccess:Boolean;
 			
@@ -99,7 +99,7 @@ package ahhenderson.core.mvc.patterns.facade {
 		 *
 		 * @param existingIndex
 		 */
-		ahhenderson_internal function rebuildActorArray(existingIndex:int):void {
+		ahhenderson_core_internal function rebuildActorArray(existingIndex:int):void {
 
 			var varr:Vector.<ActorState> = new Vector.<ActorState>();
 
@@ -119,7 +119,7 @@ package ahhenderson.core.mvc.patterns.facade {
 		 * @param messageFilter
 		 * @param messageDomain
 		 */
-		ahhenderson_internal function registerActor(actor:IFacadeActor, 
+		ahhenderson_core_internal function registerActor(actor:IFacadeActor, 
 													messageFilter:FacadeMessageFilter = null, 
 													messageDomain:String = null ):void {
 			
@@ -142,7 +142,7 @@ package ahhenderson.core.mvc.patterns.facade {
 		 * @param actorKey
 		 * @return 
 		 */
-		ahhenderson_internal function unRegisterActor(actorName:String, actorKey:String):Boolean {
+		ahhenderson_core_internal function unRegisterActor(actorName:String, actorKey:String):Boolean {
 			var existingIndex:int = searchRegisteredActors(actorName, actorKey);
 			var bSuccess:Boolean;
 

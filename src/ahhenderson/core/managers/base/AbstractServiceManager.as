@@ -1,9 +1,3 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit, Inc. Copyright 2012 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
 
 package ahhenderson.core.managers.base {
 	import ahhenderson.core.util.dependency.arg.Arg;

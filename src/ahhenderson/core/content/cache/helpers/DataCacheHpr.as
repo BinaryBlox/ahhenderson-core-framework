@@ -1,9 +1,3 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit, Inc. Copyright 2012 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
 
 package ahhenderson.core.content.cache.helpers {
     import ahhenderson.core.content.cache.enums.DataCacheType;

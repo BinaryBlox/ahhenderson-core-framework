@@ -1,11 +1,3 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit, Inc., Inc. 
-//   Copyright 2012 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
-
 
 package ahhenderson.core.collections {
 	import mx.collections.ArrayList;

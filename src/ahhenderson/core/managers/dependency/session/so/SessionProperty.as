@@ -1,9 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/*                                                                            */
-/*   Copyright 2010 ViziFit, Inc.                                          */
-/*   All rights reserved.                                                     */
-/*                                                                            */
-/*----------------------------------------------------------------------------*/
 
 package ahhenderson.core.managers.dependency.session.so {
 	import ahhenderson.core.util.DateUtil;

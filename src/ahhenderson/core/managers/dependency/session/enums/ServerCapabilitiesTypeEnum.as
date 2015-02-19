@@ -1,11 +1,3 @@
-//------------------------------------------------------------------------------
-//
-//  
-//  Copyright 2010 by ViziFit, Inc.  
-//  All rights reserved.  
-//  
-//
-//------------------------------------------------------------------------------
 
 package ahhenderson.core.managers.dependency.session.enums {
 

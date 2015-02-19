@@ -1,10 +1,4 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit Copyright 2012 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
-
+ 
 package ahhenderson.core.collections.dependency.hashMapList
 {
 	import ahhenderson.core.collections.interfaces.IDictionaryItem;

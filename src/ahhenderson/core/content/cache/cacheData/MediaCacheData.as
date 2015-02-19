@@ -1,10 +1,3 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit, Inc. Copyright 2012 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
-
 
 package ahhenderson.core.content.cache.cacheData {
 	import flash.display.BitmapData;

@@ -1,9 +1,3 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit Copyright 2011 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
 
 package ahhenderson.core.managers.dependency.objectPool.interfaces {
 	import ahhenderson.core.collections.interfaces.IEnumeration;

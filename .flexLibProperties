@@ -32,7 +32,6 @@
     <classEntry path="ahhenderson.core.interfaces.IStarlingEventDispatcher"/>
     <classEntry path="ahhenderson.core.interfaces._deprecate.IBaseList"/>
     <classEntry path="ahhenderson.core.interfaces._deprecate.IDefaultProperty"/>
-    <classEntry path="ahhenderson.core.interfaces._deprecate.ITextFormatGroup"/>
     <classEntry path="ahhenderson.core.interfaces._deprecate.IVideoPlayer"/>
     <classEntry path="ahhenderson.core.managers.DeviceManager"/>
     <classEntry path="ahhenderson.core.managers.FacadeServiceManager"/>
@@ -54,8 +53,6 @@
     <classEntry path="ahhenderson.core.managers.dependency.facadeService.base.AbstractServiceFacadeDefinition"/>
     <classEntry path="ahhenderson.core.managers.dependency.facadeService.constants.FacadeErrorConstants"/>
     <classEntry path="ahhenderson.core.managers.dependency.facadeService.constants.ServiceProxyConstants"/>
-    <classEntry path="ahhenderson.core.managers.dependency.facadeService.constants._deprecate.NotificationConstants"/>
-    <classEntry path="ahhenderson.core.managers.dependency.facadeService.constants._deprecate.ServerConstants"/>
     <classEntry path="ahhenderson.core.managers.dependency.facadeService.controller.AmfGroupedServiceCommand"/>
     <classEntry path="ahhenderson.core.managers.dependency.facadeService.controller.AmfServiceCommand"/>
     <classEntry path="ahhenderson.core.managers.dependency.facadeService.events.FacadeServiceManagerEvent"/>
@@ -71,11 +68,8 @@
     <classEntry path="ahhenderson.core.managers.dependency.objectPool.interfaces.IPoolType"/>
     <classEntry path="ahhenderson.core.managers.dependency.session.SessionMgrConstants"/>
     <classEntry path="ahhenderson.core.managers.dependency.session.enums.ServerCapabilitiesTypeEnum"/>
-    <classEntry path="ahhenderson.core.managers.dependency.session.enums.SessionManagerTypeEnum"/>
-    <classEntry path="ahhenderson.core.managers.dependency.session.so.ModuleViewSO"/>
-    <classEntry path="ahhenderson.core.managers.dependency.session.so.ModuleWidgetSO"/>
-    <classEntry path="ahhenderson.core.managers.dependency.session.so.ServerCapabilitySO"/>
-    <classEntry path="ahhenderson.core.managers.dependency.session.so.ServerContextSO"/>
+    <classEntry path="ahhenderson.core.managers.dependency.session.so.ServerCapability"/>
+    <classEntry path="ahhenderson.core.managers.dependency.session.so.ServerContext"/>
     <classEntry path="ahhenderson.core.managers.dependency.session.so.SessionProperty"/>
     <classEntry path="ahhenderson.core.managers.dependency.session.so.ViewSO"/>
     <classEntry path="ahhenderson.core.managers.helpers.SessionHpr"/>

@@ -1,11 +1,3 @@
-//------------------------------------------------------------------------------
-//
-//  
-//  Copyright 2012 by ViziFit, Inc.  
-//  All rights reserved.  
-//  
-//
-//------------------------------------------------------------------------------
 
 package ahhenderson.core.managers.dependency.facadeService.events {
 	import flash.events.Event;

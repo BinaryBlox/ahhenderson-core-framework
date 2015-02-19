@@ -1,16 +1,10 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit Copyright 2012 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
 
 package ahhenderson.core.collections {
-	import ahhenderson.core.collections.interfaces.IDictionaryItem;
+	import mx.collections.ArrayList;
+	
 	import ahhenderson.core.collections.interfaces.IEnumerableDictionaryItem;
 	import ahhenderson.core.collections.interfaces.IEnumerableDictionaryList;
 	import ahhenderson.core.collections.interfaces.IEnumeration;
-	import mx.collections.ArrayList;
 
 
 	public class EnumerableDictionaryList implements IEnumerableDictionaryList {

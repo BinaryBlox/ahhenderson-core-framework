@@ -1,9 +1,3 @@
-/*----------------------------------------------------------------------------*/
-/*                                                                            */
-/*   Copyright 2010 ViziFit, Inc.                                          */
-/*   All rights reserved.                                                     */
-/*                                                                            */
-/*----------------------------------------------------------------------------*/
 
 package ahhenderson.core.managers.dependency.session.so {
 	import flash.system.Capabilities;
@@ -13,9 +7,9 @@ package ahhenderson.core.managers.dependency.session.so {
 	import ahhenderson.core.managers.dependency.device.constants.PlatformConstants;
 	import ahhenderson.core.managers.dependency.session.enums.ServerCapabilitiesTypeEnum;
 
-	public class ServerContextSO {
+	public class ServerContext {
 
-		public function ServerContextSO() {
+		public function ServerContext() {
 
 			setCapabilities();
 		}
@@ -80,7 +74,7 @@ package ahhenderson.core.managers.dependency.session.so {
 				} 
 			}
 			
-			DictionaryBuilder.addItem(new ServerCapabilitySO(ServerCapabilitiesTypeEnum.IS_MOBILE.value, isMobile), _serverCapabilities);
+			DictionaryBuilder.addItem(new ServerCapability(ServerCapabilitiesTypeEnum.IS_MOBILE.value, isMobile), _serverCapabilities);
 				
 		/*	var kvPairs:Array = value.split('&');
 			var kvPair:Array;

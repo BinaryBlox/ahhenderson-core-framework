@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 //
-//   ViziFit, Inc. 
+//   Anthony Henderson  
 //   Copyright 2012 
 //   All rights reserved. 
 //

@@ -1,9 +1,3 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit, Inc. Copyright 2012 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
 
 package ahhenderson.core.managers.helpers {
 	import ahhenderson.core.collections.interfaces.IEnumeration;

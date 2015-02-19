@@ -1,17 +1,10 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit, Inc. 
-//   Copyright 2011 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
 
 package ahhenderson.core.managers.dependency.session.so{
 	import ahhenderson.core.collections.interfaces.IDictionaryItem;
 	
-	public class ServerCapabilitySO implements IDictionaryItem {
+	public class ServerCapability implements IDictionaryItem {
 		
-		public function ServerCapabilitySO(key:String, 
+		public function ServerCapability(key:String, 
 										 value:*=null,
 										 valueType:String=null,
 										 isUpdateable:Boolean=true ) {

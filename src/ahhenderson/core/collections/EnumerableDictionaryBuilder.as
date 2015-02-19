@@ -1,22 +1,10 @@
-//------------------------------------------------------------------------------
-//
-//   ViziFit, Inc., Inc. 
-//   Copyright 2012 
-//   All rights reserved. 
-//
-//------------------------------------------------------------------------------
 
- 
 
 package ahhenderson.core.collections {
-	import ahhenderson.core.collections.interfaces.IDictionaryItem;
-	import ahhenderson.core.collections.interfaces.IEnumerableDictionaryItem;
-	import ahhenderson.core.collections.interfaces.IEnumerableDictionaryList;
-	import ahhenderson.core.collections.interfaces.IEnumeration;
-	
-	import flash.utils.Dictionary;
-	
 	import mx.collections.ArrayList;
+	
+	import ahhenderson.core.collections.interfaces.IEnumerableDictionaryItem;
+	import ahhenderson.core.collections.interfaces.IEnumeration;
 	 
 	public class EnumerableDictionaryBuilder  {
  

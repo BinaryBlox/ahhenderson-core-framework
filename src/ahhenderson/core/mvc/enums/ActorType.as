@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 //
 //  
-//  Copyright 2012 by ViziFit, Inc.  
+//  Copyright 2012 by Anthony Henderson   
 //  All rights reserved.  
 //  
 //

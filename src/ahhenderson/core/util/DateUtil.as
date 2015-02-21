@@ -328,7 +328,7 @@ package ahhenderson.core.util
 			
 		}
 		
-		public static const monthLabelsList:Array = new Array(
+		public static const monthLabelsList:Array = 
 			[ 
 				{ label: "January"},
 				{ label: "February"},
@@ -342,10 +342,10 @@ package ahhenderson.core.util
 				{ label: "October"},
 				{ label: "November"},
 				{ label: "December"}
-			]);
+			];
 		
 		
-		public static const monthLabels:Array = new Array("January",
+		public static const monthLabels:Array = ["January",
 			"February",
 			"March",
 			"April",
@@ -356,9 +356,9 @@ package ahhenderson.core.util
 			"September",
 			"October",
 			"November",
-			"December");
+			"December"];
 		
-		public static const monthLabelsSummary:Array = new Array("Jan",
+		public static const monthLabelsSummary:Array = ["Jan",
 			"Feb",
 			"Mar",
 			"Apr",
@@ -369,7 +369,7 @@ package ahhenderson.core.util
 			"Sep",
 			"Oct",
 			"Nov",
-			"Dec");
+			"Dec"];
 		
 		
 		

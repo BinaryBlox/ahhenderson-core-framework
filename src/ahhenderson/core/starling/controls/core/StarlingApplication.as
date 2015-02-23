@@ -142,7 +142,7 @@ package ahhenderson.core.starling.controls.core {
 			
 			Starling.handleLostContext = _handleLostContext;
 			Starling.multitouchEnabled = _multitouchEnabled; //DeviceCapabilities.handleLostContextOnDevice();
-			this._starling = new Starling(rootScreen(), this.stage, null, null, _renderMode, _defaultProfile);
+			this._starling = new Starling(rootContainer(), this.stage, null, null, _renderMode, _defaultProfile);
 			this._starling.enableErrorChecking = _enableErrorChecking;
 			this._starling.showStats = true;
 			this._starling.showStatsAt(HAlign.RIGHT, VAlign.BOTTOM);
@@ -176,18 +176,18 @@ package ahhenderson.core.starling.controls.core {
 				this.stage.autoOrients = this._savedAutoOrients;
 			}
 			
-			onRootCreated(event, rootView);
+			onRootContainerCreated(event, rootView);
 		}
 
-		protected function rootScreen():Class{
+		protected function rootContainer():Class{
 			
 			throw new Error( "Override StarlingApplication rootScreen() method" );
 			
 		}
 		
-		protected function onRootCreated(event:Object, rootView:*):void{
+		protected function onRootContainerCreated(event:Object, rootView:*):void{
 			
-			throw new Error( "Override StarlingApplication startUp() method" );
+			throw new Error( "Override StarlingApplication onRootContainerCreated() method" );
 			
 		}
 		

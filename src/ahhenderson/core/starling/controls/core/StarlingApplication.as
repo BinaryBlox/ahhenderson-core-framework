@@ -119,7 +119,7 @@ package ahhenderson.core.starling.controls.core {
 			
 			throw new Error( "Override StarlingApplication defaultConfiguration() method" );
 		}
-		 
+	
 		/*********************************************************************************************************************************************************************************
 		 * NOTES	 
 		 * 

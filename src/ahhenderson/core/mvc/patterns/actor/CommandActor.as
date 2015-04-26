@@ -46,7 +46,7 @@ package ahhenderson.core.mvc.patterns.actor {
 		override public function beforeRemove():void {
 
 			//LogHpr.log(LType.INFO, LCategory.MVC, "REMOVING mediator", "Mediator Id: " + this.mediatorName +  this.mediatorKey);  
-			trace("Before remove!!");
+			//trace("Before remove!!");
 			
 			
 			this.remove(); // Remove from facade.
@@ -58,7 +58,7 @@ package ahhenderson.core.mvc.patterns.actor {
 
 			//LogHpr.log(LType.INFO, LCategory.MVC, "ADDING mediator", "Mediator Id: " + this.mediatorName +  this.mediatorKey);
 		  
-			trace( "ADDING actor: ", this.actorKey);
+			//trace( "ADDING actor: ", this.actorKey);
 			 
 
 		}

@@ -75,7 +75,7 @@ package ahhenderson.core.managers.dependency.objectPool {
 			initialSize:uint = 0,
 			maxBuffer:uint = 0,
 			initObject:Object = null,
-			styleName:String = null,
+			defaultResetFunction:Function = null,
 			resetMethod:String = '',
 			disposeMethod:String = '',
 			isUpdateable:Boolean = true) {
@@ -93,7 +93,7 @@ package ahhenderson.core.managers.dependency.objectPool {
 			_initObject = initObject;
 			_resetMethod = resetMethod;
 			_disposeMethod = disposeMethod;
-			_styleName = styleName;
+			_defaultResetObjectFunction = defaultResetFunction;
 			_isUpdateable = isUpdateable;
 
 			var i:uint = initialSize;
@@ -105,14 +105,14 @@ package ahhenderson.core.managers.dependency.objectPool {
 
 		private var _ObjectClass:Class;
 
-		public function get styleName():String
+		public function get defaultResetObjectFunction():Function
 		{
-			return _styleName;
+			return _defaultResetObjectFunction;
 		}
 
-		public function set styleName(value:String):void
+		public function set defaultResetObjectFunction(value:Function):void
 		{
-			_styleName = value;
+			_defaultResetObjectFunction = value;
 		}
 
 		/**
@@ -187,7 +187,7 @@ package ahhenderson.core.managers.dependency.objectPool {
 
 		private var _strictMode:Boolean;
 		
-		private var _styleName:String;
+		private var _defaultResetObjectFunction:Function;
 		
 
 		/**
@@ -202,21 +202,21 @@ package ahhenderson.core.managers.dependency.objectPool {
 		 * @return An object of the type specified by ObjectPool constructor's ObjectClass parameter
 		 */
 		public function borrowObject():* {
-			var objectToReturn:*;
+			var objectToBorrow:*;
 
 			if (_bufferSize == 0)
-				objectToReturn = createObject();
+				objectToBorrow = createObject();
 			else
-				objectToReturn = _pool[--_bufferSize];
+				objectToBorrow = _pool[--_bufferSize];
 
 			if (_strictMode)
-				_objectsInUse.push(objectToReturn);
+				_objectsInUse.push(objectToBorrow);
 
 			// Add unique id for each used item in pool
-			if(objectToReturn && objectToReturn is IPoolObject)
-				IPoolObject(objectToReturn).initObject(UIDUtil.createUID());
+			if(objectToBorrow && objectToBorrow is IPoolObject)
+				IPoolObject(objectToBorrow).initObject(UIDUtil.createUID());
 			
-			return objectToReturn;
+			return objectToBorrow;
 		}
 
 		/**

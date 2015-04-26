@@ -147,14 +147,14 @@ package ahhenderson.core.managers {
 		//------------------------------------------------------------------------------
 
 		public function createPool(type:IPoolType,
-			defaultStyleName:String = null,
+			defaultResetObjectFunction:Function = null,
 			size:int = DEFAULT_POOL_SIZE,
 			buffer:int = DEFAULT_POOL_BUFFER,
 			initObject:Object = null,
 			disposeMethod:String = DEFAULT_DISPOSE_METHOD,
 			resetMethod:String = DEFAULT_RESET_METHOD):void {
 
-			m_pool = new Pool(type, type.objClass, false, size, buffer, initObject, defaultStyleName, resetMethod, disposeMethod);
+			m_pool = new Pool(type, type.objClass, false, size, buffer, initObject, defaultResetObjectFunction, resetMethod, disposeMethod);
 
 			enumerableDictionary.addItem(m_pool);
 		}
@@ -261,7 +261,7 @@ package ahhenderson.core.managers {
 
 			if(_debug){
 				trace("Returning: " + IPoolObject(poolObj).poolType.value);
-				trace("User: " + Pool(enumerableDictionary.getItem(IPoolObject(poolObj).poolType)).used.toString());
+				trace("Using: " + Pool(enumerableDictionary.getItem(IPoolObject(poolObj).poolType)).used.toString());
 				logger.trace(IPoolObject(poolObj).poolType, "Returning: " + IPoolObject(poolObj).poolType.value);
 				logger.trace(IPoolObject(poolObj).poolType, "Used: " + Pool(enumerableDictionary.getItem(IPoolObject(poolObj).poolType)).used.toString());	 
 			}

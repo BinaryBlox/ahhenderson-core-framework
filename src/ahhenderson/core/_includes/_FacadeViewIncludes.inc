@@ -99,7 +99,7 @@ public function registerMediator(mediator:IMediatorActor, messageFilter:FacadeMe
 
 	_mediatorName=mediator.actorName;
 	_mediatorGuid=_mediatorKey.replace(_mediatorName, "");
-	trace("Mediator Guid: " + _mediatorGuid + " _ Mediator Name:" + _mediatorName);
+	//trace("Mediator Guid: " + _mediatorGuid + " _ Mediator Name:" + _mediatorName);
 }
 
 

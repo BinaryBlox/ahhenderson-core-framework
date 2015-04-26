@@ -13,6 +13,9 @@ package ahhenderson.core.managers.dependency.objectPool.interfaces
 		function get used():int;
 		
 		function get ObjectClass():Class;
+		 
+		function get defaultResetObjectFunction():Function;
+		
 		
 		function optimize():void;
 		

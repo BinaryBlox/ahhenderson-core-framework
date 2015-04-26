@@ -1,6 +1,8 @@
 package ahhenderson.core.starling.controls.core {
 
+	import com.kurst.cfwrk.system.DeviceCapabilities;
 	import com.kurst.cfwrk.system.StarlingMultiResConfig;
+	import com.kurst.cfwrk.system.data.DeviceInfo;
 	
 	import flash.display.Bitmap;
 	import flash.display.Loader;
@@ -88,26 +90,29 @@ package ahhenderson.core.starling.controls.core {
 
 		protected var _starling:Starling;
 		
-		protected var _splashImageNameDefault_Portrait_2x:String ="Default-Portrait@2x.png";
+		protected var _splashImg_Portrait_2x:String ="Default-Portrait@2x.png";
 		
-		protected var _splashImageNameDefault_Landscape_2x:String ="Default-Landscape@2x.png";
+		protected var _splashImg_Landscape_2x:String ="Default-Landscape@2x.png";
 		
-		protected var _splashImageNameDefault_Portrait:String ="Default-Portrait.png";
+		protected var _splashImg_Portrait:String ="Default-Portrait.png";
 		
-		protected var _splashImageNameDefault_Landscape:String ="Default-Landscape.png";
+		protected var _splashImg_Landscape:String ="Default-Landscape.png";
 		
-		protected var _splashImageNameDefault:String ="Default.png";
+		protected var _splashImg_Default:String ="Default.png";
 		
-		protected var _splashImageNameDefault_2x:String ="Default@2x.png";
+		protected var _splashImg_Default_2x:String ="Default@2x.png";
 		
-		protected var _splashImageNameDefault_568h_2x:String ="Default-568h@2x.png";
+		protected var _splashImg_568h_2x:String ="Default-568h@2x.png";
+		
+		// iOS 6 Res.
+		protected var _splashImg_375w_677h_2x:String ="Default-375w-667h@2x.png"; // 750x1334
+		
+		// iOS 6 Plus Res.
+		protected var _splashImg_414w_736h_landscape_3x:String ="Default-414w-736h-landscape@3x.png"; // 2208x1242
+		
+		protected var _splashImg_414w_736h_3x:String ="Default-414w-736h@3x.png"; // 1242x2208
 
-		/*protected function loaderInfo_completeHandler( event:flash.events.Event ):void {
-
-			// Overrride!
-			throw new Error( "Override BaseApp loaderInfo_completeHandler() method" );
-
-		}*/
+	
 		protected var _enableErrorChecking:Boolean=false;
 		protected var _handleLostContext:Boolean=true;
 		protected var _multitouchEnabled:Boolean=true;
@@ -132,7 +137,13 @@ package ahhenderson.core.starling.controls.core {
 		 **********************************************************************************************************************************************************************************/
 		protected function determineScreenResolution():void{
 			 
-			_resolutionConfig.set();
+			const device:DeviceInfo = DeviceCapabilities.deviceInformation(); 
+			const viewPort:Rectangle = new Rectangle(0,0,device.width, device.height);
+			
+			trace("Viewport Width: ", viewPort.width);
+			trace("Viewport Height: ", viewPort.height);
+			
+			_resolutionConfig.set(viewPort);
 			
 		}
 		
@@ -147,6 +158,7 @@ package ahhenderson.core.starling.controls.core {
 			this._starling.showStats = true;
 			this._starling.showStatsAt(HAlign.RIGHT, VAlign.BOTTOM);
 			
+			DeviceCapabilities.init(stage);
 			_resolutionConfig = new StarlingMultiResConfig(stage, _starling);
 			
 			// Dynamically set correct resolution
@@ -216,51 +228,70 @@ package ahhenderson.core.starling.controls.core {
 				if ( Capabilities.screenResolutionX == 1536 && Capabilities.screenResolutionY == 2048 ) {
 					isCurrentlyPortrait =
 						this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
-					filePath = isCurrentlyPortrait ? _splashImageNameDefault_Portrait_2x : _splashImageNameDefault_Landscape_2x;
+					filePath = isCurrentlyPortrait ? _splashImg_Portrait_2x : _splashImg_Landscape_2x;
+				}
+				else if ( Capabilities.screenResolutionX == 1242 && Capabilities.screenResolutionY == 2208 ) {
+					isCurrentlyPortrait =
+						this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
+					filePath = isCurrentlyPortrait ? _splashImg_414w_736h_3x : _splashImg_414w_736h_landscape_3x;
 				} else if ( Capabilities.screenResolutionX == 768 && Capabilities.screenResolutionY == 1024 ) {
 					isCurrentlyPortrait =
 						this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
-					filePath = isCurrentlyPortrait ? _splashImageNameDefault_Portrait : _splashImageNameDefault_Landscape;
+					filePath = isCurrentlyPortrait ? _splashImg_Portrait : _splashImg_Landscape;
+				} 
+				else if ( Capabilities.screenResolutionX == 750 ) {
+					isPortraitOnly = true;
+					
+					if ( Capabilities.screenResolutionY == 1334 ) {
+						filePath = _splashImg_375w_677h_2x;
+					} else {
+						filePath = _splashImg_Default_2x;
+					}
 				} else if ( Capabilities.screenResolutionX == 640 ) {
 					isPortraitOnly = true;
 
 					if ( Capabilities.screenResolutionY == 1136 ) {
-						filePath = _splashImageNameDefault_568h_2x;
+						filePath = _splashImg_568h_2x;
 					} else {
-						filePath = _splashImageNameDefault_2x;
+						filePath = _splashImg_Default_2x;
 					}
 				} else if ( Capabilities.screenResolutionX == 320 ) {
 					isPortraitOnly = true;
-					filePath = _splashImageNameDefault;
+					filePath = _splashImg_Default;
 				} else {
 					isCurrentlyPortrait =
 						this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
-					filePath = isCurrentlyPortrait ? _splashImageNameDefault_Portrait : _splashImageNameDefault_Landscape;
+					filePath = isCurrentlyPortrait ? _splashImg_Portrait : _splashImg_Landscape;
 				}
 			} else {
 				if ( Capabilities.screenResolutionX == 1536 && Capabilities.screenResolutionY == 2048 ) {
 					isCurrentlyPortrait =
 						this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
-					filePath = isCurrentlyPortrait ? _splashImageNameDefault_Portrait_2x : _splashImageNameDefault_Landscape_2x;
+					filePath = isCurrentlyPortrait ? _splashImg_Portrait_2x : _splashImg_Landscape_2x;
+				} 
+				else if ( Capabilities.screenResolutionX == 1242 && Capabilities.screenResolutionY == 2208 ) {
+					isCurrentlyPortrait =
+						this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
+					filePath = isCurrentlyPortrait ? _splashImg_414w_736h_3x : _splashImg_414w_736h_landscape_3x;
 				} else if ( Capabilities.screenResolutionX == 768 && Capabilities.screenResolutionY == 1024 ) {
 					isCurrentlyPortrait =
 						this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
-					filePath = isCurrentlyPortrait ? _splashImageNameDefault_Portrait : _splashImageNameDefault_Landscape;
+					filePath = isCurrentlyPortrait ? _splashImg_Portrait : _splashImg_Landscape;
 				} else if ( Capabilities.screenResolutionX == 640 ) {
 					isPortraitOnly = true;
 
 					if ( Capabilities.screenResolutionY == 1136 ) {
-						filePath = _splashImageNameDefault_568h_2x;
+						filePath = _splashImg_568h_2x;
 					} else {
-						filePath = _splashImageNameDefault_2x;
+						filePath = _splashImg_Default_2x;
 					}
 				} else if ( Capabilities.screenResolutionX == 320 ) {
 					isPortraitOnly = true;
-					filePath = _splashImageNameDefault;
+					filePath = _splashImg_Default;
 				} else {
 					isCurrentlyPortrait =
 						this.stage.orientation == StageOrientation.DEFAULT || this.stage.orientation == StageOrientation.UPSIDE_DOWN;
-					filePath = isCurrentlyPortrait ? _splashImageNameDefault_Portrait : _splashImageNameDefault_Landscape;
+					filePath = isCurrentlyPortrait ? _splashImg_Portrait : _splashImg_Landscape;
 				}
 			}
 

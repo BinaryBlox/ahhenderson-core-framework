@@ -54,7 +54,10 @@ package ahhenderson.core.managers.dependency.objectPool.interfaces {
 		function resetObject():void;
 		
 		
-
+		function set resetObjectFunction(value:Function):void; 
+		  
+		function get resetObjectFunction():Function;
+		  
 		
 	}
 }

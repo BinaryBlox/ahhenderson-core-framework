@@ -123,7 +123,7 @@ package ahhenderson.core.mvc.patterns.facade {
 													messageFilter:FacadeMessageFilter = null, 
 													messageDomain:String = null ):void {
 			
-			trace("Registering actor type: " + actor.actorType.value);
+			//trace("Registering actor type: " + actor.actorType.value);
 			addActor(new ActorState(actor, actor.actorKey, messageFilter, messageDomain ));
 		}
 
@@ -149,11 +149,13 @@ package ahhenderson.core.mvc.patterns.facade {
 			try {
 				if (existingIndex >= 0) {
 					rebuildActorArray(existingIndex);
-						trace("Actor removed: " + actorName + actorKey);
-				} else
+						//trace("Actor removed: " + actorName + actorKey);
+				} else{
+					
+				}
 					//trace("Actor not found: " + mediatorName + mediatorKey);
 
-					bSuccess = true;
+				bSuccess = true;
 			} catch (error:Error) {
 				trace("unRegisterActor Error: " + error.message + actorKey);
 			} finally {
@@ -254,7 +256,7 @@ package ahhenderson.core.mvc.patterns.facade {
 				if (existingIndex >= 0) {
 					trace("Actor already exists..." + actorName + actorState.actorKey);
 				} else {
-					trace("Adding Actor: " + actorName + actorState.actorKey);
+					//trace("Adding Actor: " + actorName + actorState.actorKey);
 					_registeredActors.push(actorState);
 					 
 					
@@ -365,7 +367,7 @@ package ahhenderson.core.mvc.patterns.facade {
 			for each (var actorState:ActorState in _registeredActors) {
 
 				var actorUID:String = actorState.actor.actorName + actorState.actorKey;
-				trace("ACTOR UID:", actorUID);
+				//trace("ACTOR UID:", actorUID);
 				if ((name + key) == actorUID) {
 					//trace("Found mediator: " + mediatorUID);
 					return actorState.actor;
@@ -398,10 +400,12 @@ package ahhenderson.core.mvc.patterns.facade {
 						useStrictFilter)) {
 						
 						actorState.actor.handleFacadeMessage(message as IFacadeMessage);
-						trace(message.messageId + " - " + actorState.actorKey + actorState.actor.actorName + ": message accepted");
+						//trace(message.messageId + " - " + actorState.actorKey + actorState.actor.actorName + ": message accepted");
 					}
-					 else
-					trace(message.messageId + " - " + actorState.actorKey + actorState.actor.actorName + ": message filtered"); 
+					 else{
+						 //trace(message.messageId + " - " + actorState.actorKey + actorState.actor.actorName + ": message filtered"); 
+					 }
+					
 					
 				}
 			} 

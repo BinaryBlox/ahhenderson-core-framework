@@ -102,6 +102,7 @@ package ahhenderson.core.starling.controls.core {
 		
 		protected var _splashImg_Default_2x:String ="Default@2x.png";
 		
+		// iOS 5,5c,5s Res.
 		protected var _splashImg_568h_2x:String ="Default-568h@2x.png";
 		
 		// iOS 6 Res.
@@ -138,8 +139,13 @@ package ahhenderson.core.starling.controls.core {
 		protected function determineScreenResolution():void{
 			 
 			const device:DeviceInfo = DeviceCapabilities.deviceInformation(); 
-			const viewPort:Rectangle = new Rectangle(0,0,device.width, device.height);
 			
+			//TonyNote: 
+			trace( "XRes: " + Capabilities.screenResolutionX );
+			trace( "YRes: " + Capabilities.screenResolutionY );
+			
+			//const viewPort:Rectangle = new Rectangle(0,0,device.width, device.height);
+			const viewPort:Rectangle = new Rectangle(0,0,Capabilities.screenResolutionX, Capabilities.screenResolutionY);
 			trace("Viewport Width: ", viewPort.width);
 			trace("Viewport Height: ", viewPort.height);
 			

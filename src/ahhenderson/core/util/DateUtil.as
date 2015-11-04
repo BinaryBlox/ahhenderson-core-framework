@@ -93,26 +93,30 @@ package ahhenderson.core.util
 			return  (showYear) ? dateLabel + " " + year : dateLabel; 
 		}
 		
-		public static function getFullDateFormat(date:Date, showYear:Boolean=false):String
+		public static function getFullDateFormat(date:Date, showYear:Boolean=false, showDayOfWeek:Boolean=true):String
 		{ 
 			var month:String = DateUtil.getMonthName(date.month);
 			var day:String = date.date.toString()
 			var dayOfWeek:String = DateUtil.getDayOfWeek(date.day);
 			var year:String = date.fullYear.toString();
 			 
-			return  (showYear) ? dayOfWeek +", " + month + " " + day + "  " + year : dayOfWeek +", " + month + " " + day 
+			var formattedValue:String = (showDayOfWeek) ? showDayOfWeek + ", " : "";
+			formattedValue+=month + " ";
+			formattedValue+=day + " ";
+			formattedValue+=(showYear) ? ", " + year : "";
+			
+			return formattedValue;
 		}
 		
-		public static function getSummaryDateFormat(date:Date, showMonth:Boolean=true, showYear:Boolean=true):String
+		public static function getSummaryDateFormat(date:Date, showMonth:Boolean=true, showYear:Boolean=true, showDayOfWeek:Boolean=true):String
 		{ 
-			var month:String = DateUtil.getSummarizeMonthName(date.month);
+			var month:String =  (showMonth) ? DateUtil.getSummarizeMonthName(date.month) + " ": "";
 			var day:String = date.date.toString()
-			var dayOfWeek:String = DateUtil.getSummarizedDayOfWeek(date.day);
-			var year:String = date.fullYear.toString(); 
+			var dayOfWeek:String = (showDayOfWeek) ? DateUtil.getSummarizedDayOfWeek(date.day) + " " : "";
+			var year:String = (showYear) ? ", " + date.fullYear.toString() : ""; 
 			
-			var formattedDate:String = (showMonth) ?  dayOfWeek + ", " + month + " " + day :  dayOfWeek + "  " + day;
-			
-			return  (showYear) ? formattedDate + "  " + year :  formattedDate; 
+			return  dayOfWeek + month + day + year;
+			 
 		}
 		
 		public static function getSummaryDateFormat2(date:Date, showMonth:Boolean=true, showYear:Boolean=true):String

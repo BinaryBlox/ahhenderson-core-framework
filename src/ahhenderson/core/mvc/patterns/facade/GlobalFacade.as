@@ -26,6 +26,8 @@ package ahhenderson.core.mvc.patterns.facade {
 
 	use namespace ahhenderson_core_internal;
 	
+ 
+	[Event(name = "globalFacadeActorEvent", type = "ahhenderson.core.mvc.events.globalFacadeActorEvent")]
 	[Event(name = "globalMessageManagerEvent", type = "ahhenderson.core.mvc.events.GlobalFacadeMessageEvent")] 
 	public final class GlobalFacade extends EventDispatcher implements IFacade {
 

@@ -20,6 +20,12 @@ package ahhenderson.core.util
 
 	public class StringUtil
 	{
+		
+		public static function generateUniqueConstant(constantName:String):String{
+			
+			return substitute("{0}_{1}", constantName, GuidUtil.createUID());
+			
+		}
 
 		public static function objectPropertyToString(property:String, item:Object ):String {
 			

@@ -133,7 +133,7 @@ package ahhenderson.core.mvc.patterns.actor {
 			GlobalFacade.instance.unRegisterActor( this._actorName, this._key );
 		}
 
-		protected function sendDelayedFacadeMessage( delay:int, message:FacadeMessage ):void {
+		public function sendDelayedFacadeMessage( delay:int, message:FacadeMessage ):void {
 
 			_delayTimer = new CustomTimer( delay, 1 );
 			_delayTimer.TimerData = message;
@@ -141,13 +141,13 @@ package ahhenderson.core.mvc.patterns.actor {
 			_delayTimer.start();
 		}
 
-		protected function sendFacadeMessage( messageId:String, messageBody:Object = null, messageFilter:FacadeMessageFilter = null,
+		public function sendFacadeMessage( messageId:String, messageBody:Object = null, messageFilter:FacadeMessageFilter = null,
 											  ... args ):void {
 
 			GlobalFacade.instance.sendMessage.apply( null, [ messageId, messageBody, messageFilter ].concat( args ));
 		}
 
-		protected function sendFacadeMessageObject( message:FacadeMessage ):void {
+		public function sendFacadeMessageObject( message:FacadeMessage ):void {
 
 			GlobalFacade.instance.sendMessageObject( message );
 		}

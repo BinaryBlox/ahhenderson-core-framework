@@ -8,6 +8,7 @@
 package ahhenderson.core.mvc.interfaces {
 
 	import ahhenderson.core.mvc.enums.ActorType;
+	import ahhenderson.core.mvc.patterns.facade.FacadeMessage;
 	import ahhenderson.core.mvc.patterns.facade.FacadeMessageFilter;
 
 
@@ -34,6 +35,13 @@ package ahhenderson.core.mvc.interfaces {
 		function register( actor:IFacadeActor, messageFilter:FacadeMessageFilter, useStarling:Boolean = true, ... args ):String;
 
 		function remove():void;
+		
+		function sendDelayedFacadeMessage( delay:int, message:FacadeMessage ):void;
+		
+		function sendFacadeMessage( messageId:String, messageBody:Object = null, messageFilter:FacadeMessageFilter = null, ... args ):void;
+		
+		function sendFacadeMessageObject( message:FacadeMessage ):void
+
 
 	}
 }
